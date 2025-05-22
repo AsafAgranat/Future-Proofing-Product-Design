@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Designer Skills Analysis - Duotone Infographic</title>
+    <title>Future-Proofing Product Design 2025-2030</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --color-bg: #1a1a1a;
@@ -26,13 +26,13 @@
 
         .section-container {
             min-height: 100vh;
-            padding: 8vw 5vw;
+            padding: 6vw 5vw; /* Adjusted padding slightly */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
-            border-bottom: 2px solid var(--color-fg); /* Using fg for subtle separation */
+            border-bottom: 2px solid var(--color-fg); 
         }
 
         .section-container:last-child {
@@ -40,34 +40,42 @@
         }
         
         .title-main {
-            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-size: clamp(2.5rem, 7vw, 5.5rem); /* Adjusted clamp slightly */
             font-weight: 900;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             line-height: 1.1;
             text-transform: uppercase;
             letter-spacing: -0.02em;
         }
 
         .title-section {
-            font-size: clamp(2rem, 6vw, 4.5rem);
+            font-size: clamp(2rem, 5vw, 4rem); /* Adjusted clamp slightly */
             font-weight: 700;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             line-height: 1.2;
         }
         
         .intro-text {
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-size: clamp(1rem, 2.2vw, 1.4rem); /* Adjusted clamp slightly */
             max-width: 800px;
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             font-weight: 300;
             line-height: 1.6;
         }
+        .intro-text a {
+            text-decoration: underline;
+            font-weight: 500; /* Make link slightly bolder */
+        }
+        .intro-text a:hover {
+            opacity: 0.8;
+        }
+
 
         .highlight-stat {
-            font-size: clamp(3rem, 10vw, 8rem);
+            font-size: clamp(3rem, 9vw, 7rem); /* Adjusted clamp slightly */
             font-weight: 900;
             color: var(--color-fg);
             text-align: center;
@@ -75,25 +83,25 @@
         }
         
         .highlight-label {
-            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-size: clamp(1rem, 1.8vw, 1.2rem); /* Adjusted clamp slightly */
             text-align: center;
             max-width: 500px;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .chart-wrapper {
             width: 100%;
-            max-width: 900px; /* Max width for larger charts */
+            max-width: 900px; 
             margin: 2rem auto;
-            padding: 2rem;
+            padding: 1.5rem; /* Adjusted padding */
             border: 1px solid var(--color-fg);
             position: relative;
         }
         
-        .chart-container { /* For Chart.js canvas parent */
+        .chart-container { 
             position: relative;
             width: 100%;
-            height: 400px; /* Default height, can be overridden */
+            height: 400px; 
         }
 
         @media (min-width: 768px) {
@@ -105,7 +113,7 @@
         .skill-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem; /* Adjusted gap */
             width: 100%;
             max-width: 1200px;
         }
@@ -117,36 +125,16 @@
         }
 
         .skill-name {
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-size: clamp(1.2rem, 2.8vw, 1.6rem); /* Adjusted clamp */
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .skill-metric {
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-size: clamp(0.9rem, 2.2vw, 1.1rem); /* Adjusted clamp */
             font-weight: 300;
         }
         .skill-metric strong { font-weight: 600; }
-
-        .strategy-list {
-            width: 100%;
-            max-width: 900px;
-        }
-        .strategy-item {
-            border: 1px solid var(--color-fg);
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-        }
-        .strategy-title {
-            font-size: clamp(1.1rem, 2.8vw, 1.6rem);
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        .strategy-desc {
-            font-size: clamp(0.9rem, 2.2vw, 1.1rem);
-            font-weight: 300;
-            line-height: 1.5;
-        }
         
         .marketing-point {
             border-left: 3px solid var(--color-fg);
@@ -155,29 +143,28 @@
             max-width: 700px;
         }
         .marketing-title {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1.2rem, 2.8vw, 1.7rem); /* Adjusted clamp */
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
         .marketing-text {
-            font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+            font-size: clamp(0.9rem, 2vw, 1.05rem); /* Adjusted clamp */
             font-weight: 300;
             line-height: 1.6;
         }
 
-        /* Unconventional list for roles */
         .roles-flow {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
-            padding: 2rem 0;
+            padding: 1.5rem 0; /* Adjusted padding */
             max-width: 1000px;
         }
         .role-bubble {
-            padding: 0.75rem 1.5rem;
+            padding: 0.7rem 1.4rem; /* Adjusted padding */
             border: 1px solid var(--color-fg);
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-size: clamp(0.85rem, 1.8vw, 1rem); /* Adjusted clamp */
             font-weight: 400;
             text-align: center;
             transition: transform 0.2s ease-out;
@@ -186,12 +173,56 @@
             transform: scale(1.05);
         }
 
-        /* Footer */
         .footer-creative {
             text-align: center;
-            padding: 3rem 1rem;
-            font-size: 0.9rem;
+            padding: 2.5rem 1rem; /* Adjusted padding */
+            font-size: 0.85rem; /* Adjusted font size */
             font-weight: 300;
+        }
+
+        .read-more-toggle {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--color-fg);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        .read-more-toggle:hover {
+            opacity: 0.8;
+        }
+        .read-more-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            text-align: left;
+            font-weight: 300;
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 1.8vw, 1.05rem); /* Adjusted font size */
+            max-width: 800px; /* Limit width for readability */
+            margin: 1rem auto 0 auto; /* Center content */
+        }
+        .read-more-content.expanded {
+            max-height: 2000px; /* Adjust as needed, large enough for content */
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--color-fg);
+        }
+        .read-more-content p {
+            margin-bottom: 1em;
+        }
+        .read-more-content strong {
+            font-weight: 600;
+        }
+        .read-more-content ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+            margin-bottom: 1em;
+        }
+        .read-more-content li {
+            margin-bottom: 0.5em;
         }
         
     </style>
@@ -200,9 +231,14 @@
 
     <section id="hero" class="section-container">
         <h1 class="title-main">Future-Proofing Product Design</h1>
-        <p class="intro-text">An analysis of strategic skills and marketing for 2025-2030, based on the evolving landscape of technology and market demands.</p>
+        <p class="intro-text">An analysis of strategic skills and marketing for 2025-2030, based on the evolving landscape of technology and market demands, informed by resources like the <a href="https://www.weforum.org/reports/future-of-jobs-report-2023/" target="_blank" rel="noopener noreferrer">WEF 'Future of Jobs Report' series</a>.</p>
         <div class="highlight-stat" id="skillChangeStat">39%</div>
         <p class="highlight-label">of core worker skills are expected to change by 2030. Continuous learning is not just an advantage, it's a necessity.</p>
+        <button class="read-more-toggle" data-target="hero-more">In detail</button>
+        <div id="hero-more" class="read-more-content">
+            <p>The product design landscape is undergoing a significant transformation, driven by rapid technological advancements and evolving market demands. For Product Designers aiming to thrive between 2025 and 2030, a strategic cultivation of a hybrid skillset is paramount. This involves blending advanced technological competencies, particularly in Artificial Intelligence (AI) and data literacy, with uniquely human-centric skills such as creative and analytical thinking, resilience, leadership, and a commitment to lifelong learning.</p>
+            <p>AI, in particular, is a transformative force, necessitating that designers understand its capabilities not just as tools for their own work, but as a fundamental component of the products and experiences they create. Proactive career management, grounded in an understanding of these macro trends, is therefore essential. The demand for skills is bifurcating: a growing need for proficiency in AI and big data is paralleled by an emphasis on skills AI cannot replicate—deep creative thought, nuanced analytical reasoning, and leadership.</p>
+        </div>
     </section>
 
     <section id="evolving-skillset" class="section-container">
@@ -214,6 +250,11 @@
                 <canvas id="topSkillsChart"></canvas>
             </div>
             <p class="text-xs text-center mt-2 opacity-75">Data: % Employers Rating as Core Skill (2025) & Net % Increase by 2030.</p>
+        </div>
+        <button class="read-more-toggle" data-target="evolving-skillset-more">In detail</button>
+        <div id="evolving-skillset-more" class="read-more-content">
+            <p><strong>Analytical Thinking</strong> remains the most sought-after core skill (69% employers, 58% net increase by 2030), vital for dissecting user problems and making evidence-based design decisions. <strong>Creative Thinking</strong> (57% core, 66% net increase) fuels innovation. <strong>Technological Literacy</strong> (51% core, 66% net increase) is essential for understanding technology capabilities and effective collaboration. <strong>AI & Big Data</strong> skills are experiencing explosive growth (45% core, 87% net increase), crucial for personalizing experiences and leveraging data insights.</p>
+            <p>The "Design and User Experience" field itself is evolving. While 25% of employers consider it core now, it's projected for a 45% net increase in importance, categorized as an "Emerging Skill." This signals its growing strategic value. UX is expanding beyond traditional screens to AI interactions, conversational UIs, and AR/VR. Routine UX tasks may automate, pushing designers towards complex problem-solving and strategic leadership, especially in AI-UX and ethical considerations.</p>
         </div>
         
         <div class="mt-12 w-full max-w-4xl text-center">
@@ -251,6 +292,12 @@
                 <p class="text-sm opacity-75 mt-2">Irreplaceable for understanding true user needs.</p>
             </div>
         </div>
+        <button class="read-more-toggle" data-target="human-centric-more">In detail</button>
+        <div id="human-centric-more" class="read-more-content">
+            <p>Employers seek an adaptive mindset. <strong>Resilience, Flexibility & Agility</strong> (67% core, 66% net increase) are vital for navigating rapid tech shifts and changing project requirements. This skill set is the top differentiator between growing and declining job roles.</p>
+            <p><strong>Curiosity & Lifelong Learning</strong> (50% core, 61% net increase) directly addresses the 39% expected change in core skills by 2030, demanding continuous learning of new tools and paradigms.</p>
+            <p><strong>Leadership & Social Influence</strong> (61% core, 58% net increase) are crucial for advocating user-centric approaches and leading design initiatives. <strong>Empathy & Active Listening</strong> (50% core) remain irreplaceable for understanding user needs as AI augments more tasks.</p>
+        </div>
     </section>
 
     <section id="strategic-focus" class="section-container">
@@ -274,6 +321,12 @@
                 </div>
             </div>
         </div>
+        <button class="read-more-toggle" data-target="strategic-tech-more">In detail (Technical)</button>
+        <div id="strategic-tech-more" class="read-more-content">
+            <p><strong>AI in Design:</strong> Designers must focus on designing AI-powered features, understanding ethical considerations, and leveraging AI tools for research and automation. This may lead to specializations like "AI Product Designer."</p>
+            <p><strong>Data-Informed Design:</strong> Mastery of data analysis to translate insights into design decisions, validate hypotheses, A/B test, and measure impact is critical.</p>
+            <p><strong>Understanding Developer Platforms & Tools:</strong> For designers creating products for developers, empathy for their workflows, understanding of APIs, SDKs, IDEs, and Git is essential. This requires significant technical aptitude.</p>
+        </div>
 
         <div class="chart-wrapper mt-10">
             <h3 class="text-2xl font-semibold text-center mb-4">Workforce Strategies for AI & Designer's Role</h3>
@@ -281,6 +334,11 @@
             <div class="chart-container" style="height: 500px;">
                 <canvas id="aiStrategiesChart"></canvas>
             </div>
+        </div>
+        <button class="read-more-toggle" data-target="strategic-leadership-more">In detail (Leadership & Transformation)</button>
+        <div id="strategic-leadership-more" class="read-more-content">
+            <p><strong>Elevating Design Impact through Leadership & Systems Thinking:</strong> Experienced designers can lead Design Systems, ensuring consistency, efficiency, and scalability. This is a strategic function addressing business needs and fostering talent. Mentorship and talent development are also key, with designers playing a role in upskilling the workforce and addressing skills gaps.</p>
+            <p><strong>Bridging Gaps & Driving Transformation:</strong> Product Designers can bridge communication gaps between departments, helping overcome organizational resistance to change. By grounding work in user research and data, they can champion new approaches. As AI tools become prevalent, designers must evolve into "AI collaborators," defining problems for AI and ensuring ethical human-AI interaction.</p>
         </div>
     </section>
     
@@ -302,6 +360,13 @@
                 <p class="marketing-text">Tailor applications. Research companies. Highlight skills relevant to growing roles like UI/UX Design, AI/ML Specialist, and those in tech services focusing on AI upskilling.</p>
             </div>
         </div>
+        <button class="read-more-toggle" data-target="marketing-more">In detail</button>
+        <div id="marketing-more" class="read-more-content">
+            <p><strong>Crafting Your Narrative:</strong> Your personal brand should emphasize adaptability, a growth mindset, and a balance of design craft with strategic thinking and tech fluency. Articulate how skills like "Analytical Thinking" and "Creative Thinking" solve UX challenges, and how "AI and Big Data" skills inform your design process. Present yourself as a "strategic partner and continuous learner."</p>
+            <p><strong>Demonstrating Impact (Portfolio):</strong> Prioritize quality case studies that detail your design process from research to refinement, showcasing problem-solving and measurable outcomes. Quantify achievements and include projects reflecting understanding of AI or developer tools if targeting those roles.</p>
+            <p><strong>Aligning with Industry Needs:</strong> Tailor applications by researching companies and roles. Highlight skills relevant to fast-growing roles like "UI and UX Designers," "AI and Machine Learning Specialists," and "Big Data Specialists." Emphasize AI proficiency for tech service roles.</p>
+        </div>
+
 
         <h3 class="text-2xl font-semibold text-center mb-4 mt-12">Fastest-Growing Roles Relevant to Product Design</h3>
         <div class="roles-flow">
@@ -321,27 +386,30 @@
         <p class="intro-text">Success hinges on cultivating a synergistic blend of advanced technological skills (AI, data) and deeply human-centric capabilities (creativity, analysis, adaptability, leadership). Embrace AI as a collaborator, not a threat.</p>
         <div class="highlight-stat" style="font-size: clamp(2rem, 6vw, 5rem); margin-top: 3rem;">Future-Ready Mindset</div>
         <p class="highlight-label" style="max-width: 700px;">Characterized by agency, adaptability, and a steadfast commitment to lifelong learning and contribution. Be not just a skilled practitioner, but an indispensable strategic leader.</p>
+        <button class="read-more-toggle" data-target="conclusion-more">In detail</button>
+        <div id="conclusion-more" class="read-more-content">
+            <p>The period leading up to 2030 demands a proactive approach. Success lies in blending advanced tech skills with human-centric capabilities. While technology transforms tasks, it also creates new roles and elevates skills machines cannot replicate. For Product Designers, this means embracing AI as a collaborator to augment abilities and focus on complex, strategic work.</p>
+            <p>Navigating this landscape requires a "future-ready mindset" characterized by agency, adaptability, and a commitment to lifelong learning. Designers who embody these qualities can shape products, services, and work nature, evolving from skilled practitioners to indispensable strategic leaders.</p>
+        </div>
     </section>
 
     <footer class="footer-creative">
-        <p>Infographic based on "Product Designer Skills Analysis".</p>
-        <p>Visuals dynamically styled with a random duotone palette on each reload.</p>
-        <p>No SVG or Mermaid JS used. Charts rendered via Chart.js on Canvas, using canvas-generated patterns for differentiation.</p>
-    </footer>
+        Created by <a href="https://asaf.agranat.me">Asaf Agranat</a>
+   </footer>
 
     <script>
         let duotoneColors = { bg: '#000000', fg: '#FFFFFF' };
-        let charts = {}; // To store chart instances for updates
+        let charts = {}; 
 
         function generateDuotonePalette() {
             const hBg = Math.floor(Math.random() * 360);
-            const sBg = Math.floor(Math.random() * 30) + 20; // 20-50% saturation
-            const lBg = Math.floor(Math.random() * 20) + 10; // 10-30% lightness (dark)
+            const sBg = Math.floor(Math.random() * 30) + 20; 
+            const lBg = Math.floor(Math.random() * 20) + 10; 
             const colorBg = `hsl(${hBg}, ${sBg}%, ${lBg}%)`;
 
             const hFg = (hBg + Math.floor(Math.random() * 120) + 120) % 360; 
-            const sFg = Math.floor(Math.random() * 30) + 70; // 70-100% saturation
-            const lFg = Math.floor(Math.random() * 20) + 70; // 70-90% lightness (bright)
+            const sFg = Math.floor(Math.random() * 30) + 70; 
+            const lFg = Math.floor(Math.random() * 20) + 70; 
             const colorFg = `hsl(${hFg}, ${sFg}%, ${lFg}%)`;
             
             return { bg: colorBg, fg: colorFg };
@@ -353,58 +421,28 @@
             document.documentElement.style.setProperty('--color-fg', duotoneColors.fg);
         }
         
-        applyColors(); // Apply on initial load
+        applyColors(); 
 
-        // --- Canvas Pattern Generation ---
         function createPattern(patternColor, size = 10, type = 'lines-diag-down') {
             const patternCanvas = document.createElement('canvas');
             const patternCtx = patternCanvas.getContext('2d');
             patternCanvas.width = size;
             patternCanvas.height = size;
-
             patternCtx.strokeStyle = patternColor;
             patternCtx.lineWidth = Math.max(1, Math.floor(size / 8)); 
-
             switch (type) {
                 case 'lines-h': 
-                    patternCtx.beginPath();
-                    patternCtx.moveTo(0, size / 2);
-                    patternCtx.lineTo(size, size / 2);
-                    patternCtx.stroke();
-                    break;
+                    patternCtx.beginPath(); patternCtx.moveTo(0, size / 2); patternCtx.lineTo(size, size / 2); patternCtx.stroke(); break;
                 case 'lines-v': 
-                    patternCtx.beginPath();
-                    patternCtx.moveTo(size / 2, 0);
-                    patternCtx.lineTo(size / 2, size);
-                    patternCtx.stroke();
-                    break;
+                    patternCtx.beginPath(); patternCtx.moveTo(size / 2, 0); patternCtx.lineTo(size / 2, size); patternCtx.stroke(); break;
                 case 'lines-diag-up': 
-                    patternCtx.beginPath();
-                    patternCtx.moveTo(0, size);
-                    patternCtx.lineTo(size, 0);
-                    patternCtx.stroke();
-                    break;
+                    patternCtx.beginPath(); patternCtx.moveTo(0, size); patternCtx.lineTo(size, 0); patternCtx.stroke(); break;
                 case 'dots':
-                    patternCtx.fillStyle = patternColor;
-                    patternCtx.beginPath();
-                    patternCtx.arc(size / 2, size / 2, Math.max(1, size / 5), 0, 2 * Math.PI);
-                    patternCtx.fill();
-                    break;
+                    patternCtx.fillStyle = patternColor; patternCtx.beginPath(); patternCtx.arc(size / 2, size / 2, Math.max(1, size / 5), 0, 2 * Math.PI); patternCtx.fill(); break;
                 case 'crosshatch':
-                    patternCtx.beginPath();
-                    patternCtx.moveTo(0, size);
-                    patternCtx.lineTo(size, 0);
-                    patternCtx.moveTo(0, 0);
-                    patternCtx.lineTo(size, size);
-                    patternCtx.stroke();
-                    break;
-                case 'lines-diag-down': 
-                default:
-                    patternCtx.beginPath();
-                    patternCtx.moveTo(0, 0);
-                    patternCtx.lineTo(size, size);
-                    patternCtx.stroke();
-                    break;
+                    patternCtx.beginPath(); patternCtx.moveTo(0, size); patternCtx.lineTo(size, 0); patternCtx.moveTo(0, 0); patternCtx.lineTo(size, size); patternCtx.stroke(); break;
+                case 'lines-diag-down': default:
+                    patternCtx.beginPath(); patternCtx.moveTo(0, 0); patternCtx.lineTo(size, size); patternCtx.stroke(); break;
             }
             return patternCtx.createPattern(patternCanvas, 'repeat');
         }
@@ -417,25 +455,17 @@
         }
         updateChartPatterns(); 
 
-        // Chart.js Global Config
         Chart.defaults.font.family = "'IBM Plex Sans', sans-serif";
         Chart.defaults.font.size = 12; 
         Chart.defaults.borderColor = duotoneColors.fg + '60'; 
         Chart.defaults.color = duotoneColors.fg;
 
-
         const commonChartOptions = (isHorizontal = false) => ({
-            responsive: true,
-            maintainAspectRatio: false,
-            indexAxis: isHorizontal ? 'y' : 'x',
+            responsive: true, maintainAspectRatio: false, indexAxis: isHorizontal ? 'y' : 'x',
             plugins: {
                 legend: {
-                    position: 'bottom',
-                    labels: { 
-                        color: duotoneColors.fg,
-                        font: { size: 12 }, 
-                        padding: 20,
-                        usePointStyle: true,
+                    position: 'bottom', labels: { 
+                        color: duotoneColors.fg, font: { size: 12 }, padding: 20, usePointStyle: true,
                         generateLabels: function(chart) {
                             const original = Chart.defaults.plugins.legend.labels.generateLabels;
                             const labels = original.call(this, chart);
@@ -444,81 +474,49 @@
                                 if (dataset && dataset.backgroundColor instanceof CanvasPattern) {
                                     const swatchCanvas = document.createElement('canvas');
                                     const swatchCtx = swatchCanvas.getContext('2d');
-                                    
                                     let boxSize = 12; 
-                                    if (label.font && typeof label.font.size === 'number') {
-                                        boxSize = label.font.size;
-                                    } else if (chart.options.plugins.legend.labels.font && typeof chart.options.plugins.legend.labels.font.size === 'number') {
-                                        boxSize = chart.options.plugins.legend.labels.font.size;
-                                    } else if (Chart.defaults.font && typeof Chart.defaults.font.size === 'number') { 
-                                        boxSize = Chart.defaults.font.size;
-                                    }
-
-                                    swatchCanvas.width = Math.max(10, boxSize * 1.5); 
-                                    swatchCanvas.height = Math.max(10, boxSize);    
-
-                                    swatchCtx.fillStyle = dataset.backgroundColor; 
-                                    swatchCtx.fillRect(0, 0, swatchCanvas.width, swatchCanvas.height);
-                                    
-                                    label.pointStyle = swatchCanvas;
-                                    label.fillStyle = 'rgba(0,0,0,0)'; 
-                                    
-                                } else if (dataset) {
-                                     label.fillStyle = dataset.backgroundColor; 
-                                }
+                                    if (label.font && typeof label.font.size === 'number') { boxSize = label.font.size; }
+                                    else if (chart.options.plugins.legend.labels.font && typeof chart.options.plugins.legend.labels.font.size === 'number') { boxSize = chart.options.plugins.legend.labels.font.size; }
+                                    else if (Chart.defaults.font && typeof Chart.defaults.font.size === 'number') { boxSize = Chart.defaults.font.size; }
+                                    swatchCanvas.width = Math.max(10, boxSize * 1.5); swatchCanvas.height = Math.max(10, boxSize);    
+                                    swatchCtx.fillStyle = dataset.backgroundColor; swatchCtx.fillRect(0, 0, swatchCanvas.width, swatchCanvas.height);
+                                    label.pointStyle = swatchCanvas; label.fillStyle = 'rgba(0,0,0,0)'; 
+                                } else if (dataset) { label.fillStyle = dataset.backgroundColor; }
                             });
                             return labels;
                         }
                     }
                 },
                 tooltip: {
-                    backgroundColor: duotoneColors.bg + 'E6', 
-                    titleColor: duotoneColors.fg,
-                    bodyColor: duotoneColors.fg,
-                    borderColor: duotoneColors.fg,
-                    borderWidth: 1,
-                    padding: 10,
+                    backgroundColor: duotoneColors.bg + 'E6', titleColor: duotoneColors.fg, bodyColor: duotoneColors.fg,
+                    borderColor: duotoneColors.fg, borderWidth: 1, padding: 10,
                     callbacks: {
                         title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) { return label.join(' '); }
-                            return label;
+                            const item = tooltipItems[0]; let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) { return label.join(' '); } return label;
                         }
                     }
                 }
             },
             scales: {
                 [isHorizontal ? 'x' : 'y']: {
-                    beginAtZero: true,
-                    grid: { 
-                        color: duotoneColors.fg + '33', 
-                        drawBorder: false,
-                    },
+                    beginAtZero: true, grid: { color: duotoneColors.fg + '33', drawBorder: false, },
                     ticks: { color: duotoneColors.fg, font: { size: 11 } }
                 },
                 [isHorizontal ? 'y' : 'x']: {
                     grid: { display: false }, 
                     ticks: { 
-                        color: duotoneColors.fg, 
-                        font: { size: 11 },
+                        color: duotoneColors.fg, font: { size: 11 },
                         callback: function(value, index, ticks) {
                             const label = this.getLabelForValue(value);
                             if (typeof label === 'string' && label.length > 20) { 
-                                const words = label.split(' ');
-                                const lines = [];
-                                let currentLine = '';
+                                const words = label.split(' '); const lines = []; let currentLine = '';
                                 words.forEach(word => {
-                                    if ((currentLine + word).length > 18 && currentLine) {
-                                        lines.push(currentLine.trim());
-                                        currentLine = '';
-                                    }
+                                    if ((currentLine + word).length > 18 && currentLine) { lines.push(currentLine.trim()); currentLine = ''; }
                                     currentLine += word + ' ';
                                 });
-                                lines.push(currentLine.trim());
-                                return lines;
-                            }
-                            return label;
+                                lines.push(currentLine.trim()); return lines;
+                            } return label;
                         }
                     }
                 }
@@ -526,58 +524,37 @@
         });
         
         const topSkillsData = {
-            labels: [
-                'Analytical Thinking', 'Creative Thinking', 'Technological Literacy', 
-                'AI & Big Data', 'Design & User Experience', 'Resilience, Flex. & Agility',
-                'Curiosity & Lifelong Learning', 'Leadership & Social Influence'
-            ],
+            labels: ['Analytical Thinking', 'Creative Thinking', 'Technological Literacy', 'AI & Big Data', 'Design & User Experience', 'Resilience, Flex. & Agility', 'Curiosity & Lifelong Learning', 'Leadership & Social Influence'],
             datasets: [
-                {
-                    label: '% Employers Rating as Core Skill 2025',
-                    data: [69, 57, 51, 45, 25, 67, 50, 61],
-                    backgroundColor: pattern1, 
-                    borderColor: duotoneColors.fg,
-                    borderWidth: 2,
-                    barPercentage: 0.7,
-                    categoryPercentage: 0.6
-                },
-                {
-                    label: 'Net % Increase by 2030',
-                    data: [58, 66, 66, 87, 45, 66, 61, 58],
-                    backgroundColor: pattern2, 
-                    borderColor: duotoneColors.fg,
-                    borderWidth: 2,
-                    barPercentage: 0.7,
-                    categoryPercentage: 0.6
-                }
+                { label: '% Employers Rating as Core Skill 2025', data: [69, 57, 51, 45, 25, 67, 50, 61], backgroundColor: pattern1, borderColor: duotoneColors.fg, borderWidth: 2, barPercentage: 0.7, categoryPercentage: 0.6 },
+                { label: 'Net % Increase by 2030', data: [58, 66, 66, 87, 45, 66, 61, 58], backgroundColor: pattern2, borderColor: duotoneColors.fg, borderWidth: 2, barPercentage: 0.7, categoryPercentage: 0.6 }
             ]
         };
-        charts.topSkills = new Chart(document.getElementById('topSkillsChart'), {
-            type: 'bar',
-            data: topSkillsData,
-            options: commonChartOptions(true) 
-        });
+        charts.topSkills = new Chart(document.getElementById('topSkillsChart'), { type: 'bar', data: topSkillsData, options: commonChartOptions(true) });
 
         const aiStrategiesData = {
-            labels: [
-                'Reskilling/upskilling for AI work', 'Hiring for AI tool design', 
-                'Hiring for AI collaboration', 'Re-orienting to AI opportunities',
-                'Transitioning AI-disrupted roles', 'Downsizing due to AI'
-            ],
-            datasets: [{
-                label: '% Employers Adopting Strategy',
-                data: [77, 69, 62, 49, 47, 41],
-                backgroundColor: pattern3, 
-                borderColor: duotoneColors.fg,
-                borderWidth: 2,
-                barPercentage: 0.6,
-                categoryPercentage: 0.7
-            }]
+            labels: ['Reskilling/upskilling for AI work', 'Hiring for AI tool design', 'Hiring for AI collaboration', 'Re-orienting to AI opportunities', 'Transitioning AI-disrupted roles', 'Downsizing due to AI'],
+            datasets: [{ label: '% Employers Adopting Strategy', data: [77, 69, 62, 49, 47, 41], backgroundColor: pattern3, borderColor: duotoneColors.fg, borderWidth: 2, barPercentage: 0.6, categoryPercentage: 0.7 }]
         };
-        charts.aiStrategies = new Chart(document.getElementById('aiStrategiesChart'), {
-            type: 'bar',
-            data: aiStrategiesData,
-            options: commonChartOptions(false) 
+        charts.aiStrategies = new Chart(document.getElementById('aiStrategiesChart'), { type: 'bar', data: aiStrategiesData, options: commonChartOptions(false) });
+
+        document.querySelectorAll('.read-more-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.dataset.target;
+                const content = document.getElementById(targetId);
+                if (content) {
+                    const isExpanded = content.classList.contains('expanded');
+                    content.classList.toggle('expanded');
+                    button.textContent = isExpanded ? 'In detail' : 'Hide detail';
+                    
+                    if (!isExpanded) {
+                        // Optional: Scroll to bring the button into view nicely if content is long
+                        // setTimeout(() => { // Allow time for expansion
+                        //    button.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        // }, 500); // Corresponds to CSS transition time
+                    }
+                }
+            });
         });
 
     </script>
